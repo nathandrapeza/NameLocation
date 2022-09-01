@@ -2,6 +2,7 @@ import './App.css'
 import React from 'react';
 import { AiOutlineSearch } from "react-icons/ai";
 import { useEffect, useState } from 'react';
+import ReactCountryFlag from "react-country-flag";
 
 
 
@@ -25,7 +26,22 @@ function App() {
         <input className="textInput" type="text" name="name" placeholder='...'/>
         <button onMouseEnter={changeBackgroundHover} onMouseLeave={changeBackgroundLeave}><AiOutlineSearch></AiOutlineSearch></button>
       </form>
-      <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/flag-ceuta-melilla_1f1ea-1f1e6.png"/>
+      
+      <ReactCountryFlag
+        className="emojiFlag"
+        countryCode="US"
+        style={{
+            fontSize: '5em',
+        }}
+      />
+      <ReactCountryFlag
+        className="emojiFlag"
+        countryCode="KR"
+        style={{
+            fontSize: '5em',
+        }}
+      />
+
     </>
   );
 }
