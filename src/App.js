@@ -25,6 +25,7 @@ function App() {
         <input className="textInput" type="text" name="name" placeholder='...'/>
         <button onMouseEnter={changeBackgroundHover} onMouseLeave={changeBackgroundLeave}><AiOutlineSearch></AiOutlineSearch></button>
       </form>
+      <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/flag-ceuta-melilla_1f1ea-1f1e6.png"/>
     </>
   );
 }
