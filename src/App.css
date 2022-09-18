@@ -82,6 +82,7 @@ img {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    
   }
 
 .CountryCard {
@@ -93,9 +94,6 @@ img {
     border-radius: 35px;
     overflow: hidden;
     border: none;
-    
-    
-    
 }
 
 .searchbarContainer {

@@ -3,7 +3,9 @@ import React from 'react';
 import { AiOutlineSearch } from "react-icons/ai";
 import { useState } from 'react';
 import CountryCard from './CountryCard';
+import api_key from './config';
 
+console.log(process.env);
 
 /*
 const country1 = {
@@ -23,9 +25,14 @@ function App() {
   //const [searchName, setSearchName] = useState('');
 
   const searchName = async (name) => {
-    const response = await fetch(`${API_URL}${name}`)
+    
+    
+    const response = await fetch(`${API_URL}${name}&apikey=${api_key}`);
     const data = await response.json();
     setCountries(data.country);
+
+    console.log(`response: ${response}`)
+    console.log(`data: ${data}`)
 
     setDisplayName(name);
     if (data.country.length===0) {
@@ -35,10 +42,14 @@ function App() {
       setSearchError(false);
     }
     console.log(data);
-
-    
-    
     setSearchTerm("")
+    
+
+    /*
+    axios.get(``).then(resp => {
+    console.log(resp.data);
+    });
+    */
   }
 
   function changeBackgroundHover(e) {
@@ -74,7 +85,7 @@ function App() {
         <>
           <h4>Data for {displayName.charAt(0).toUpperCase() + displayName.slice(1)}:</h4>
           <div className="container">
-            {countries.map((country) => (<CountryCard country={country}></CountryCard>))}
+            {countries.map((country) => (<CountryCard country={country} key={country.country_id}></CountryCard>))}
           </div>
         </>
       ) : (
