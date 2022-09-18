@@ -83,7 +83,7 @@ function App() {
         </>
       )}
     
-      {searchError&&(displayName.length>0) ? (<h4>Sorry, '{displayName}' was not found in the database.</h4>) : (<></>)}
+      {searchError&&(displayName.length>0) ? (<h4>Sorry, the name {displayName.charAt(0).toUpperCase() + displayName.slice(1)} was not found in the database.</h4>) : (<></>)}
       
     </div>
   );
