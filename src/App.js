@@ -1,8 +1,7 @@
 import './App.css'
 import React from 'react';
 import { AiOutlineSearch } from "react-icons/ai";
-import { useEffect, useState } from 'react';
-import ReactCountryFlag from "react-country-flag";
+import { useState } from 'react';
 import CountryCard from './CountryCard';
 
 
@@ -29,7 +28,7 @@ function App() {
     setCountries(data.country);
 
     setDisplayName(name);
-    if (data.country.length==0) {
+    if (data.country.length===0) {
       console.log("weeee");
       setSearchError(true);
     } else {
